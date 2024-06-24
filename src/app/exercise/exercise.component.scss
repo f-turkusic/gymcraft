@@ -1,0 +1,105 @@
+.exercise-container {
+  padding: 20px;
+}
+
+.exercise-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  label {
+    font-weight: bold;
+  }
+
+  select {
+    padding: 5px;
+  }
+
+  input[type="text"] {
+    padding: 5px;
+    flex-grow: 1;
+  }
+
+  .add-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+}
+
+.workout {
+  margin-bottom: 20px;
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    td input {
+      width: 100%;
+      padding: 5px;
+    }
+
+    td button {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 5px;
+      cursor: pointer;
+    }
+  }
+
+  .add-rep-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+}
+
+/* exercise.component.scss or exercise.component.css */
+
+:host {
+  display: block;
+  height: 100%;
+  position: relative;
+  background: url('/assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  // filter: blur(5px);
+  // -webkit-filter: blur(5px);
+}
+
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7); /* Adjust opacity and color as needed */
+  z-index: 1;
+}
+
+.app-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px; /* Adjust padding as needed */
+}
+

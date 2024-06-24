@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+header {
+  background: linear-gradient(to right, #555, #444);
+  color: #fff;
+  padding: 1em;
+  position: relative;
+  z-index: 1100; /* Ensure header is above the sidebar */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h1 {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+
+    .logo {
+      margin-right: 8px;
+      height: 40px; /* Adjust height as needed */
+    }
+  }
+  .menu-button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 1200; /* Ensure button is always above other elements */
+  }
+}

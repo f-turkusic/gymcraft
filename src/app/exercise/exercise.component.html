@@ -1,0 +1,33 @@
+<!-- exercise.component.html -->
+<div class="exercise-container">
+  <div class="exercise-header">
+    <label for="exercise-select">Select Exercise:</label>
+    <select id="exercise-select" name="exercise-select" [(ngModel)]="selectedExercise">
+      <option *ngFor="let exercise of exercises" [value]="exercise">{{ exercise }}</option>
+    </select>
+    <input type="text" name="exerciseName" [(ngModel)]="selectedExerciseName" placeholder="Exercise Name">
+    <button class="add-button" (click)="addWorkout()">+</button>
+  </div>
+  <div class="workout" *ngFor="let workout of workouts">
+    <h2>{{ workout.name }}</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Reps</th>
+          <th>Comment</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rep of workout.reps; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td><input type="number" name="repCount{{i}}" [(ngModel)]="rep.count"></td>
+          <td><input type="text" name="repComment{{i}}" [(ngModel)]="rep.comment" placeholder="Comment"></td>
+          <td><button (click)="removeRep(workout, i)">-</button></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="add-rep-button" (click)="addRep(workout)">+</button>
+  </div>
+</div>
