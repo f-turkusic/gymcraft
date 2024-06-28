@@ -1,0 +1,98 @@
+{
+  "workouts": [
+    {
+      "id": "1",
+      "name": "Workout A",
+      "date": "2024-06-28",
+      "exercises": [
+        {
+          "id": 1,
+          "name": "Push-ups",
+          "sets": [
+            {
+              "id": 1,
+              "reps": 10,
+              "comment": "Felt good"
+            },
+            {
+              "id": 2,
+              "reps": 12,
+              "comment": "Getting tired"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Pull-ups",
+          "sets": [
+            {
+              "id": 1,
+              "reps": 8,
+              "comment": "Hard"
+            },
+            {
+              "id": 2,
+              "reps": 6,
+              "comment": "Very hard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Workout B",
+      "date": "2024-06-29",
+      "exercises": [
+        {
+          "id": 1,
+          "name": "Squats",
+          "sets": [
+            {
+              "id": 1,
+              "reps": 15,
+              "comment": "Easy"
+            },
+            {
+              "id": 2,
+              "reps": 15,
+              "comment": "Still easy"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Lunges",
+          "sets": [
+            {
+              "id": 1,
+              "reps": 12,
+              "comment": "Okay"
+            },
+            {
+              "id": 2,
+              "reps": 12,
+              "comment": "Burning"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e60f",
+      "name": "test",
+      "reps": []
+    },
+    {
+      "id": "2af0",
+      "name": "test",
+      "reps": []
+    },
+    {
+      "id": "3dc5",
+      "name": "asda",
+      "date": "2024-06-28T12:45:27.443Z",
+      "reps": []
+    }
+  ]
+}

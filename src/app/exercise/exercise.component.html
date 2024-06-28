@@ -1,4 +1,4 @@
-<!-- exercise.component.html -->
+<!-- src/app/components/exercise/exercise.component.html -->
 <div class="exercise-container">
   <div class="exercise-header">
     <label for="exercise-select">Select Exercise:</label>
@@ -8,8 +8,9 @@
     <input type="text" name="exerciseName" [(ngModel)]="selectedExerciseName" placeholder="Exercise Name">
     <button class="add-button" (click)="addWorkout()">+</button>
   </div>
-  <div class="workout" *ngFor="let workout of workouts">
-    <h2>{{ workout.name }}</h2>
+  <div class="workout" *ngFor="let workout of workouts; let wIndex = index">
+    <h2>{{ workout.name }} / {{ workout.date }}</h2>
+    <button class="remove-button" (click)="removeWorkout(wIndex)">Remove Workout</button>
     <table>
       <thead>
         <tr>
@@ -20,10 +21,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let rep of workout.reps; let i = index">
+        <tr *ngFor="let exe of workout.exercises; let i = index">
           <td>{{ i + 1 }}</td>
-          <td><input type="number" name="repCount{{i}}" [(ngModel)]="rep.count"></td>
-          <td><input type="text" name="repComment{{i}}" [(ngModel)]="rep.comment" placeholder="Comment"></td>
+          <td><input type="number" name="repCount{{i}}" [(ngModel)]="exe.count"></td>
+          <td><input type="text" name="repComment{{i}}" [(ngModel)]="exe.comment" placeholder="Comment"></td>
           <td><button (click)="removeRep(workout, i)">-</button></td>
         </tr>
       </tbody>

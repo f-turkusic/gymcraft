@@ -81,7 +81,7 @@
   display: block;
   height: 100%;
   position: relative;
-  background: url('/assets/background.jpg') no-repeat center center fixed;
+  // background: url('../../assets/background1.jpg') no-repeat center center fixed;
   background-size: cover;
   // filter: blur(5px);
   // -webkit-filter: blur(5px);
@@ -101,5 +101,19 @@
   position: relative;
   z-index: 2;
   padding: 20px; /* Adjust padding as needed */
+}
+
+.add-button, .add-rep-button, .remove-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.remove-button {
+  background-color: #dc3545;
 }
 
